@@ -36,7 +36,28 @@ Step6: verify by logging using that particular user which you have created
 
 Step7: update all your changes to git
 
+# How to Deploy/setup?
 
+group_vars/all/users.yml file contains list of company super admins which should gain access to all created servers. Remove our example data and put list of your admins over there instead.
+
+Create new folder inside environments for certain servers. For example these can be: production, testing or qa
+
+Then create inventory file for the servers. This is an example:
+
+[servers]
+xxx.xxx.xxx.xxx
+yyy.yyy.yyy.yyy
+You can use hostnames or ip-addresses here.
+
+Then add people involved with certain environments into:
+
+environments/{{your-environment}}/group_vars/all/users.yml
+
+ansible-playbook -i environments/production users.yml -u root --ask-pass
+
+Note: You only need to do this once! On the next run you can run it like this:
+
+ansible-playbook -i environments/production users.yml -u your-user-name-here
 
 # Alternate method:
 
