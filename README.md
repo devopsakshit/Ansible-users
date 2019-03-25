@@ -1,15 +1,15 @@
 # Ansible-users
 Automate the process of granting / revoking SSH access to a group of servers instances to a new developer.
 
-Description:
+# Description:
 
 Automate the process of granting / revoking SSH access to a group of servers instances to a new developer using ansible
 
 
-Prerequisites:
+# Prerequisites:
 Ansible installed on the machine.
 
-Steps to follow:
+# Steps to follow:
 
 Step1: create a folder/project/repo (in git) where you will manage all users and initialize git
 Example: mkdir Ansible0users
@@ -29,10 +29,10 @@ Step6: verify by logging using that particular user which you have created
 Step7: update all your changes to git
 
 
-Alternate method:
+# Alternate method:
 Automate the process of granting / revoking SSH access to a group of servers instances to a new developer using chef
 
-Prerequisites:
+# Prerequisites:
 
 Befoe creating/removing user, we have to install chef in our stack . Process is quite simple--
 Step1: create instances (say workstation instance and node instances)
